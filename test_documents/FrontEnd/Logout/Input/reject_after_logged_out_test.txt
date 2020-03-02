@@ -1,0 +1,13 @@
+login
+admin1
+logout
+logout
+create
+delete
+advertise
+bid
+refund
+addcredit
+login
+admin1
+logout

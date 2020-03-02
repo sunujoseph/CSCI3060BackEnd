@@ -1,0 +1,7 @@
+login
+admin1
+delete
+userBS
+bid
+userBs
+

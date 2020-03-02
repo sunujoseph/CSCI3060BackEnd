@@ -1,0 +1,6 @@
+login
+userBS
+bid
+item2
+userSS
+10.01

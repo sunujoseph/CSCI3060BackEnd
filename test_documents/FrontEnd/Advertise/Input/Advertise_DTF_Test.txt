@@ -1,0 +1,7 @@
+login
+userSS
+advertise
+Lenovo Tab M10
+190
+30
+logout

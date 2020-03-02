@@ -1,0 +1,4 @@
+login
+userMaxCredit
+addcredit
+100

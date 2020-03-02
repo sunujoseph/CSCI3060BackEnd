@@ -1,0 +1,5 @@
+Enter Username:
+Enter Item Name: 
+Enter Minimum Bid: 
+Error: Maximum Price For Item Is 999.99
+Enter Minimum Bid: 

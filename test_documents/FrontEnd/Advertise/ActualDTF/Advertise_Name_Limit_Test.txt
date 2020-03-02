@@ -1,0 +1,2 @@
+03 item33                    userSS          050000020
+00 userSS          SS 222222.22

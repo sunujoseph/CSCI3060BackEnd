@@ -1,0 +1,7 @@
+Enter Username: 
+Enter Item Name: 
+Enter Seller Username: 
+Current Highest Bid Is: 12.34
+Enter Bid: 
+Error: Bid Must Be 5% Higher Than Current Highest Bid
+Enter Bid: 
