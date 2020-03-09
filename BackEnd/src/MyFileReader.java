@@ -1,11 +1,11 @@
 
 import java.io.*;
 import java.util.*;
-public class FileReader{
+public class MyFileReader{
 
     public File currentFile;
 
-    public FileReader(){
+    public MyFileReader(){
 
     }
 

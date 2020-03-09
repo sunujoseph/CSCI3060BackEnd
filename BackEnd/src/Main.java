@@ -7,8 +7,12 @@ public class Main{
     ArrayList<User> usersList = new ArrayList<User>();
     ArrayList<Item> itemList = new ArrayList<Item>();
 
-    File userFile = new File("");
-    File itemFile = new File("");
+    ArrayList<String> stringList = new ArrayList<String>();
+
+    File userFile = new File("current_user_accounts.txt");
+    File itemFile = new File("available items.txt");
+    
+    MyFileReader fileReader = new MyFileReader();
 
     
 
