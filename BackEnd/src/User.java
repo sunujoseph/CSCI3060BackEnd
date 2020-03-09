@@ -1,7 +1,7 @@
 
 public class User{
     String userName;
-    double userCredit;
+    String userCredit;
     String userType;
 
     public User(String name, String type, String credit){
@@ -12,13 +12,13 @@ public class User{
         return userName;
     }
 
-    public double getUserCredit(){
+    public String getUserCredit(){
         return userCredit;
     }
 
-    public String getUserCreditToString(){
-        String s = String.valueOf(userCredit);
-        return s;
+    public double getUserCreditToDouble(){
+        double creditDouble = Double.parseDouble(userCredit);
+        return creditDouble;
     }
 
     public String getUserType(){

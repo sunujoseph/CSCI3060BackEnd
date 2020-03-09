@@ -3,7 +3,7 @@ public class Item{
     String itemName;
     String userBuyer;
     String userSeller;
-    double itemBid;
+    String itemBid;
 
     public Item(String name, String buyer, String seller, String bid){
         
@@ -21,7 +21,7 @@ public class Item{
         return userSeller;
     }
 
-    public double getitemBid(){
+    public String getitemBid(){
         return itemBid;
     }
 
