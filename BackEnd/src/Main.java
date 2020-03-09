@@ -8,8 +8,7 @@ public class Main{
 
     //Call Transactions 
 
-    ArrayList<User> usersList = new ArrayList<User>();
-    ArrayList<Item> itemList = new ArrayList<Item>();
+    
 
     ArrayList<String> stringList = new ArrayList<String>();
 

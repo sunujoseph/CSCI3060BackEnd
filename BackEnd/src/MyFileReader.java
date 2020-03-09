@@ -30,7 +30,7 @@ public class MyFileReader{
             fileReader.close();
         } catch (FileNotFoundException e) {
             //TODO: handle exception
-            System.out.println("Error!");
+            System.out.println("ERROR!");
             e.printStackTrace();
         }   
 
