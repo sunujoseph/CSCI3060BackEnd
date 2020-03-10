@@ -3,6 +3,7 @@ public class User{
     String userName;
     String userCredit;
     String userType;
+    
 
     public User(String name, String type, String credit){
         
@@ -16,9 +17,9 @@ public class User{
         return userCredit;
     }
 
-    public double getUserCreditToDouble(){
-        double creditDouble = Double.parseDouble(userCredit);
-        return creditDouble;
+    public double getUserCreditToFloat(){
+        double creditFloat = Float.parseFloat(userCredit);
+        return creditFloat;
     }
 
     public String getUserType(){
