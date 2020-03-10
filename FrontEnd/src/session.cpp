@@ -74,11 +74,12 @@ void session::advertise() {
 
 	string transaction;
 	transaction += "03 ";
-	transaction += pad(itemName, 25, ' ', 'l');
+	transaction += pad(itemName, 19, ' ', 'l');
 	transaction += " ";
-	transaction += userObject->getUsername();
+	transaction += pad(userObject->getUsername(), 13, ' ', 'l');
 	transaction += " ";
 	transaction += pad(period, 3, '0', 'r');
+	transaction += pad(" ", 1, ' ', 'r');
 	transaction += pad(minBid, 6, '0', 'r');
 	transactionFileWriter::add(transaction);
 }

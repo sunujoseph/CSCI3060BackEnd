@@ -47,30 +47,36 @@ public class Transactions{
 
             if(trans_code.equals("00")){
                 //00-end of session
-
+                logout_trans();
             }
             else if(trans_code.equals("01")){
                 //01-create
+                create_trans();
 
             }
             else if(trans_code.equals("02")){
                 //02-delete
+                delete_trans();
 
             }
             else if(trans_code.equals("03")){
                 //03-advertise
+                adv_trans();
 
             }
             else if(trans_code.equals("04")){
                 //04-bid
+                bid_trans();
 
             }
             else if(trans_code.equals("05")){
                 //05-refund
+                refund_trans();
 
             }
             else if(trans_code.equals("06")){
                 // 06-addcredit
+                addcredit_trans();
 
             }
 

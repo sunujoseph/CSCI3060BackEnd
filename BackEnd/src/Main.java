@@ -13,13 +13,8 @@ public class Main{
 
 
     //Call Transactions 
-
-    
-
-    ArrayList<String> stringList = new ArrayList<String>();
-
-    
-    MyFileReader fileReader = new MyFileReader();
+    Transactions transactions = new Transactions();
+    transactions.transactionsLoop();
 
     
 
