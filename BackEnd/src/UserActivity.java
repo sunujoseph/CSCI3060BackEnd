@@ -10,7 +10,9 @@ public class UserActivity{
     float current_bid;
 
     MyFileReader myFileReader = new MyFileReader();
-    File itemFile = new File("available items.txt");
+    String location = System.getProperty("user.dir");
+    String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\available items.txt";
+    File itemFile = new File(file);
 
 
     

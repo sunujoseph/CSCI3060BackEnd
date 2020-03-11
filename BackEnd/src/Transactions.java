@@ -24,7 +24,9 @@ public class Transactions{
     
     String trans_code;
     float available_credit;
-    File DTF_file = new  File("DTF.txt");
+    String location = System.getProperty("user.dir");
+    String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\DTF.txt";
+    File DTF_file = new  File(file);
     
 
     public Transactions(){
@@ -51,7 +53,11 @@ public class Transactions{
             }
             else if(trans_code.equals("01")){
                 //01-create
-                create_trans();
+                //gets substring of username
+                String name = transactionsList.get(i).substring(3, 18);
+                String type = transactionsList.get(i).substring(19,21);
+                String credit = transactionsList.get(i).substring(22);
+                create_trans(name,type,credit);
 
             }
             else if(trans_code.equals("02")){
@@ -92,9 +98,10 @@ public class Transactions{
     }
 
 
-    public void create_trans(){
+    public void create_trans(String name, String type, String credit){
         //01-create
-
+        Accounts accounts = new Accounts();
+        accounts.newUserFile(name, type, credit);
     }
 
 
