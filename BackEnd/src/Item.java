@@ -1,7 +1,9 @@
-
-/*
-*   Interacts with UserActivity.java 
-*   Used to store and format user accounts data.
+/*              
+*           ITEM CLASS
+* This class reads in all the transactions through the user activity class.
+* Then applies all of the daily transactions from a merged set of daily transaction files
+* to these files to produce a new items file. Once the logout command has been entered, 
+* we merge the new items file to the old items file. 
 */
 
 public class Item{
