@@ -1,9 +1,9 @@
 /*
-*   Interacts with FileReader.java
-*   Interacts with User.java 
-*   Reads the current_user_accounts.txt
-*   Stores within a User ArrayList
-*   User Class ArrayList used for credit computation, formating and matching
+*           ACCOUNTS CLASS
+* This class reads in both old and new user files. The user class
+* feeds in information regarder a deleted/new user/changed privilege and changes 
+* the necessary information into the old user file. Reads the current_user_accounts.txt.
+*   Stores within a User ArrayList. User Class ArrayList used for credit computation, formating and matching.
 */
 import java.io.*;
 import java.util.*;
