@@ -1,4 +1,5 @@
 /*
+*   Interacts with FileReader.java
 *   Interacts with User.java 
 *   Reads the current_user_accounts.txt
 *   Stores within a User ArrayList

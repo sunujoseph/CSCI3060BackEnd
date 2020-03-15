@@ -14,6 +14,9 @@
 *   CCCCCCCCC is the available credit
 *   _ is a space
 *
+*   ====================================================================================================
+*   
+*   Interacts with FileReader.java
 *   Interacts with Accounts.java for user accounts data writing/reading
 *   Interacts with UserActivity.java for list of available item data writing/reading
 *   

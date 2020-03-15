@@ -1,5 +1,6 @@
 
 /*
+*   Interacts with FileReader.java
 *   Interacts with Item.java 
 *   Reads the available items.txt
 *   Stores within a item ArrayList

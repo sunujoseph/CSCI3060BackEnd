@@ -1,4 +1,13 @@
 
+/*
+*   Simple File Reader class 
+*   Reads through a file with a given file path
+*   Outputs each line of the file into a String ArrayList
+*
+*   Interacts with: Transactions.java
+*                   Accounts.Java
+*                   UserActivity.java
+*/
 import java.io.*;
 import java.util.*;
 public class MyFileReader{
