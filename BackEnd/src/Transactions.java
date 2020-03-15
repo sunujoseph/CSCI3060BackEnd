@@ -1,5 +1,6 @@
 
 /*
+*           TRANSACTION CLASS
 *   Here is where the BackEnd handles reading each DTF file
 *   Rules of DTF file:
 *
