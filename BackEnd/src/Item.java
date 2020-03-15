@@ -1,4 +1,9 @@
 
+/*
+*   Interacts with UserActivity.java 
+*   Used to store and format user accounts data.
+*/
+
 public class Item{
     String itemName;
     String userBuyer;
