@@ -1,7 +1,8 @@
-
-/*
-*   Interacts with Accounts.java 
-*   Used to store and format user accounts data.
+/* 
+*           USER CLASS
+* This class takes in all information regarding its user. 
+* It makes sure if the new user follows its constraints, such as its file.
+* Used to store and format user accounts data.
 */
 
 public class User{
