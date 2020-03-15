@@ -13,6 +13,13 @@
 *   TT is the user type (AA=admin, FS=full-standard, BS=buy-standard, SS=sell-standard)
 *   CCCCCCCCC is the available credit
 *   _ is a space
+*
+*   Interacts with Accounts.java for user accounts data writing/reading
+*   Interacts with UserActivity.java for list of available item data writing/reading
+*   
+*   Reads through the DTF file transactions
+*   Depending on the transaction, we create updated available items.txt and current_user_accounts.txt
+*   by calling Accounts.java and UserActivity.java
 */
 
 import java.io.*;

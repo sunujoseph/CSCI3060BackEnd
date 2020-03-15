@@ -1,4 +1,10 @@
 
+/*
+*   Interacts with Item.java 
+*   Reads the available items.txt
+*   Stores within a item ArrayList
+*   Item Class ArrayList used for credit computation, formating and matching
+*/
 import java.io.*;
 import java.util.*;
 public class UserActivity{

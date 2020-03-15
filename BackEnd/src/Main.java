@@ -4,6 +4,11 @@
 *   and then applies all of the daily transactions from a merged set of daily transaction files
 *   to these files to produce a new Current User Accounts File and new Available Items
 *   File for tomorrow’s Front End runs.
+*
+*   Calls Transactions.java and calls TransactionsLoop
+*   Loop reads through each transaction in DTF
+*   
+*   some comments are left for debugging
 */
 import java.io.*;
 import java.util.*;

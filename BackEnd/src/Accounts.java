@@ -1,4 +1,9 @@
-
+/*
+*   Interacts with User.java 
+*   Reads the current_user_accounts.txt
+*   Stores within a User ArrayList
+*   User Class ArrayList used for credit computation, formating and matching
+*/
 import java.io.*;
 import java.util.*;
 public class Accounts{

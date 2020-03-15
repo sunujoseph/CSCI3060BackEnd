@@ -1,4 +1,9 @@
 
+/*
+*   Interacts with Accounts.java 
+*   Used to store and format user accounts data.
+*/
+
 public class User{
     String userName;
     String userCredit;
