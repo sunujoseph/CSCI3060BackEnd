@@ -1,10 +1,12 @@
-
-/*
-*   Interacts with FileReader.java
-*   Interacts with Item.java 
-*   Reads the available items.txt
-*   Stores within a item ArrayList
-*   Item Class ArrayList used for credit computation, formating and matching
+/*              
+*           USER ACTIVITY CLASS
+* This class applies all transactions to the Old Available Items File 
+* to produce the New Available Items File.
+* It reads the transactions that are made through the transaction class and 
+* prints its necessary changes into the old items file. 
+* In order for another user to have access to its new changes, the item class
+* calls this class to obtain either its name, buyer, seller or bid amount. 
+* Item Class ArrayList used for credit computation, formating and matching.
 */
 import java.io.*;
 import java.util.*;
