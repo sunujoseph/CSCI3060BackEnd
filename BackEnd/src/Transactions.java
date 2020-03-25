@@ -94,8 +94,8 @@ public class Transactions{
                 String sellerName = transactionsList.get(i).substring(23,37); //15 chars long
                 String days = transactionsList.get(i).substring(39,42);
                 String bid = transactionsList.get(i).substring(43);
-                System.out.println(itemName.length());
-                System.out.println(sellerName.length());
+                //System.out.println(itemName.length());
+                //System.out.println(sellerName.length());
                 //System.out.println(""+itemName+"_"+sellerName+"_"+days+"_"+bid);
                 //System.out.println(itemName.length());
                 adv_trans(itemName, sellerName, days, bid);
@@ -107,11 +107,15 @@ public class Transactions{
                 //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSSSS_UUUUUUUUUUUUUU_PPPPPP
                 //04 i t e m 4           userSS          better admin   500.01
                 String itemName = transactionsList.get(i).substring(3, 22); //25 chars long
-                String sellerName = transactionsList.get(i).substring(23,36); //15 chars long
-                String days = transactionsList.get(i).substring(37,40);
-                String bid = transactionsList.get(i).substring(41);
+                String sellerName = transactionsList.get(i).substring(23,37); //15 chars long
+                String buyerName = transactionsList.get(i).substring(39,53); //15 chars long
+                String bid = transactionsList.get(i).substring(54);
+                System.out.println(itemName.length());
+                System.out.println(sellerName.length());
+                System.out.println(buyerName.length());
+                //System.out.println(""+itemName+"_"+sellerName+"_"+buyerName+"_"+bid);
 
-                bid_trans();
+                bid_trans(itemName, sellerName, buyerName, bid);
 
             }
             else if(trans_code.equals("05")){
@@ -178,8 +182,11 @@ public class Transactions{
     *   PPPPPP is the new bid
     *   _ is a space
     */
-    public void bid_trans(){
+    public void bid_trans(String itemName, String sellerName, String buyerName, String bid){
         //04-bid
+        //04 i t e m 4           userSS          better admin   500.01
+        //i t e m 4           userSS          userBS         011 500.00
+        userActivity.bidItem(itemName, sellerName, buyerName, bid);
 
     }
 

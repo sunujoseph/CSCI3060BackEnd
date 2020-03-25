@@ -45,11 +45,11 @@ public class UserActivity{
             if(stringList.get(i).equals("END")){
                 break;
             }
-            String itemName = stringList.get(i).substring(0,20);
-            String seller = stringList.get(i).substring(21,36);
-            String buyer = stringList.get(i).substring(37,51);
-            String days = stringList.get(i).substring(52,55);
-            String bid = stringList.get(i).substring(56);
+            String itemName = stringList.get(i).substring(0,19);
+            String seller = stringList.get(i).substring(20,35);
+            String buyer = stringList.get(i).substring(36,50);
+            String days = stringList.get(i).substring(51,54);
+            String bid = stringList.get(i).substring(55);
             //System.out.println("~"+itemName+"~"+seller+"~"+buyer+"~"+days+"~"+bid);
             Item item = new Item(itemName,seller,buyer, days, bid);
             itemList.add(item);
@@ -57,7 +57,32 @@ public class UserActivity{
         }
     }
 
-    public void bidItem(){
+    public void bidItem(String itemName, String seller, String buyer, String bid){
+        
+        for (int i = 0; i < itemList.size(); i++) { 
+            //System.out.println("Seller:_|" + itemList.get(i).userSeller.length() + "|_|" + seller.length() +"|_");
+            //System.out.println("Name:_|" + itemList.get(i).itemName + "|_|" + itemName +"|_");
+            //System.out.println("-----------------------------------------------------------");
+            
+            if( itemList.get(i).userSeller.equals(seller+" ") && itemList.get(i).itemName.equals(itemName) ){
+                System.out.println("hello");
+                itemList.get(i).setItemBuyer(buyer);
+                itemList.get(i).setItemBid(bid);
+                String listElement = itemList.get(i).currentItemsFileFormat();
+                stringList.remove(i);
+                stringList.remove(stringList.size()-1); //remove end
+                stringList.add(listElement);
+                stringList.add("END");
+                break;
+            }
+        }
+
+
+        for (int i = 0; i < stringList.size(); i++) { 
+            //System.out.println(stringList.get(i));
+        }
+        //System.out.println("===============================");
+
 
     }
 
@@ -81,7 +106,7 @@ public class UserActivity{
 
         for (int i = 0; i < stringList.size(); i++) { 
             
-            System.out.println(stringList.get(i));
+            //System.out.println(stringList.get(i));
             //System.out.println(stringList.get(i).length());
         }
         //System.out.println("===============================");

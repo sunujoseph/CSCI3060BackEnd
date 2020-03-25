@@ -13,7 +13,7 @@ public class Item{
     String itemDays;
     String itemBid;
 
-    public Item(String name, String buyer, String seller, String days, String bid){
+    public Item(String name, String seller, String buyer, String days, String bid){
         itemName = name;
         userBuyer = buyer;
         userSeller = seller;
@@ -55,6 +55,10 @@ public class Item{
 
     public void setItemSeller(String seller){
         userSeller = seller;
+    }
+
+    public void setItemBid(String bid){
+        itemBid = bid;
     }
 
     public String currentItemsFileFormat(){
