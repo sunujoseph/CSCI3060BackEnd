@@ -70,16 +70,16 @@ public class Item{
                 line = itemName;
                 i = i + itemName.length();
             }
-            else if(i == 21){
+            else if(i == 20){
                 line = line + " " + userSeller;
                 i = i + userSeller.length();
             }
-            else if (i == 36){
+            else if (i == 37){
                 line = line + " "  + userBuyer;
                 i = i + userBuyer.length();
             }
             else if (i == 52){
-                line = line + " "  + itemDays;
+                line = line + "  "  + itemDays;  //somthing wrong the frontend's formatting. 
                 i = i + itemDays.length();
             }
             else if (i == 56){

@@ -61,8 +61,8 @@ public class UserActivity{
         //item1               admin1          userBS         098 134.00
         //IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSSSS_UUUUUUUUUUUUUU_DDD_PPPPPP
         //03_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSS_DDD_PPPPPP
-        //String buyer = "              "; // no buyer yet so blank
-        String buyer = "UUUUUUUUUUUUUU";
+        String buyer = "               "; // no buyer yet so blank
+        //String buyer = "UUUUUUUUUUUUUUU";
         Item newItem = new Item(itemName,seller,buyer,days,bid);
         Item temp = itemList.get(itemList.size()-1);//store end in temp
 

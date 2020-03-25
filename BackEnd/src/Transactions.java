@@ -85,11 +85,13 @@ public class Transactions{
             else if(trans_code.equals("03")){
                 //03-advertise
                 //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSS_DDD_PPPPPP
+                //username are 15 char long
+                //items are supposed be 25 chars long
                 //03 Lenovo Tab M10      userSS        030 000190
-                String itemName = transactionsList.get(i).substring(3, 23);
-                String sellerName = transactionsList.get(i).substring(23,36);
-                String days = transactionsList.get(i).substring(37,41);
-                String bid = transactionsList.get(i).substring(42);
+                String itemName = transactionsList.get(i).substring(3, 22); //25 chars long
+                String sellerName = transactionsList.get(i).substring(23,36); //15 chars long
+                String days = transactionsList.get(i).substring(37,40);
+                String bid = transactionsList.get(i).substring(41);
                 //System.out.println(""+itemName+""+sellerName+""+days+""+bid);
                 //System.out.println(itemName.length());
                 adv_trans(itemName, sellerName, days, bid);
