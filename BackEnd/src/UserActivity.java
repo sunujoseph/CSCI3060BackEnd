@@ -116,20 +116,16 @@ public class UserActivity {
     public void newItemsFile() {
 
         // System.out.println();
-        //File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newitems.txt");
+        File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newitems.txt");
         // Create the file
-        //MyFileWriter myFileWriter = new MyFileWriter();
-
-       
-
-
-        for (int i = 0; i < stringList.size(); i++) {
-            
-            
-            System.out.println(stringList.get(i));
-            // System.out.println(stringList.get(i).length());
+        MyFileWriter myFileWriter = new MyFileWriter();
+        myFileWriter.setFile(file);
+        try {
+            myFileWriter.FileWriting(stringList);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-        
         
 
     }

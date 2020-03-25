@@ -229,7 +229,7 @@ public class Transactions{
 
 
     public void account_file(){
-        //accounts.newUserFile();
+        accounts.newUserFile();
     }
     public void items_file(){
         userActivity.newItemsFile();    

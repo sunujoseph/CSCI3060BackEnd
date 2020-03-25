@@ -18,8 +18,15 @@ public class MyFileWriter{
         currentFile = file;
     }
 
-    public void FileWriting(){
-        
+    public void FileWriting(ArrayList<String> stringList) throws IOException {
+        FileWriter writer = new FileWriter(currentFile);
+        for (int i = 0; i < stringList.size(); i++) {
+            writer.write(stringList.get(i) + System.lineSeparator());
+            //System.out.println(stringList.get(i));
+            // System.out.println(stringList.get(i).length());
+        }
+        writer.close();
+
     }
 
 }

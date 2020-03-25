@@ -143,6 +143,17 @@ public class Accounts{
 
     public void newUserFile(){
 
+        File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newusers.txt");
+        // Create the file
+        MyFileWriter myFileWriter = new MyFileWriter();
+        myFileWriter.setFile(file);
+        try {
+            myFileWriter.FileWriting(stringList);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
     }
 
 
