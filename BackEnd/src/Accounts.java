@@ -57,7 +57,7 @@ public class Accounts{
             if(usersList.get(i).userName.equals(buyer)){
                 double newCredit = usersList.get(i).getUserCreditToFloat() + Double.parseDouble(bid);
                 String strDouble = String.format("%.2f", newCredit);
-                System.out.println(strDouble);
+                //System.out.println(strDouble);
                 usersList.get(i).userCredit = strDouble;
                 String listElement = usersList.get(i).currentUsersFileFormat();
                 stringList.remove(i);
@@ -73,7 +73,7 @@ public class Accounts{
             if(usersList.get(i).userName.equals(seller)){
                 double newCredit = usersList.get(i).getUserCreditToFloat() - Double.parseDouble(bid);
                 String strDouble = String.format("%.2f", newCredit);
-                System.out.println(strDouble);
+                //System.out.println(strDouble);
                 usersList.get(i).userCredit = strDouble;
                 String listElement = usersList.get(i).currentUsersFileFormat();
                 stringList.remove(i);
@@ -140,7 +140,7 @@ public class Accounts{
 
         //file creation here
     }
-    
+
     public void newUserFile(){
 
     }
