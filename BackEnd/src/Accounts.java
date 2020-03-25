@@ -51,6 +51,45 @@ public class Accounts{
     }
 
 
+    //- issue a credit to a buyer’s account from a seller’s account (privileged transaction)
+    public void refund(String seller, String buyer, String bid){
+        for (int i = 0; i < usersList.size(); i++) { 
+            if(usersList.get(i).userName.equals(buyer)){
+                double newCredit = usersList.get(i).getUserCreditToFloat() + Double.parseDouble(bid);
+                String strDouble = String.format("%.2f", newCredit);
+                System.out.println(strDouble);
+                usersList.get(i).userCredit = strDouble;
+                String listElement = usersList.get(i).currentUsersFileFormat();
+                stringList.remove(i);
+                stringList.remove(stringList.size()-1); //remove end
+                stringList.add(listElement);
+                stringList.add("END");
+                break;
+                //System.out.println(usersList.get(i).currentUsersFileFormat());
+            }
+        }
+        for (int i = 0; i < usersList.size(); i++) { 
+            //System.out.println(usersList.get(i).userName +"_"+ seller);
+            if(usersList.get(i).userName.equals(seller)){
+                double newCredit = usersList.get(i).getUserCreditToFloat() - Double.parseDouble(bid);
+                String strDouble = String.format("%.2f", newCredit);
+                System.out.println(strDouble);
+                usersList.get(i).userCredit = strDouble;
+                String listElement = usersList.get(i).currentUsersFileFormat();
+                stringList.remove(i);
+                stringList.remove(stringList.size()-1); //remove end
+                stringList.add(listElement);
+                stringList.add("END");
+                break;
+                //System.out.println(usersList.get(i).currentUsersFileFormat());
+            }
+        }
+
+        for (int i = 0; i < stringList.size(); i++) { 
+            //System.out.println(stringList.get(i));
+        }
+    }
+
     public void addCurrentUserCredit(String name, String type, String credit){
         User creditUser = new User(name, type, credit);
         for (int i = 0; i < usersList.size(); i++) { 
@@ -79,9 +118,6 @@ public class Accounts{
         //file creation here
     }
 
-    public void newUserFile(){
-
-    }
 
 
     public void deleteUserFile(String name, String type, String credit){
@@ -105,6 +141,9 @@ public class Accounts{
         //file creation here
     }
     
+    public void newUserFile(){
+
+    }
 
 
 

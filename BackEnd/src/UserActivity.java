@@ -65,7 +65,7 @@ public class UserActivity{
             //System.out.println("-----------------------------------------------------------");
             
             if( itemList.get(i).userSeller.equals(seller+" ") && itemList.get(i).itemName.equals(itemName) ){
-                System.out.println("hello");
+                //System.out.println("hello");
                 itemList.get(i).setItemBuyer(buyer);
                 itemList.get(i).setItemBid(bid);
                 String listElement = itemList.get(i).currentItemsFileFormat();
@@ -114,6 +114,12 @@ public class UserActivity{
     }
 
     public void newItemsFile(){
+        for (int i = 0; i < stringList.size(); i++) { 
+            
+            
+            //System.out.println(stringList.get(i));
+            //System.out.println(stringList.get(i).length());
+        }
 
     }
 

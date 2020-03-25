@@ -110,9 +110,9 @@ public class Transactions{
                 String sellerName = transactionsList.get(i).substring(23,37); //15 chars long
                 String buyerName = transactionsList.get(i).substring(39,53); //15 chars long
                 String bid = transactionsList.get(i).substring(54);
-                System.out.println(itemName.length());
-                System.out.println(sellerName.length());
-                System.out.println(buyerName.length());
+                //System.out.println(itemName.length());
+                //System.out.println(sellerName.length());
+                //System.out.println(buyerName.length());
                 //System.out.println(""+itemName+"_"+sellerName+"_"+buyerName+"_"+bid);
 
                 bid_trans(itemName, sellerName, buyerName, bid);
@@ -120,7 +120,18 @@ public class Transactions{
             }
             else if(trans_code.equals("05")){
                 //05-refund
-                refund_trans();
+                //05 userFS          userSS          012012.34
+                //XX_UUUUUUUUUUUUUUU_SSSSSSSSSSSSSSS_CCCCCCCCC
+                String buyerName = transactionsList.get(i).substring(3, 18); //25 chars long
+                String sellerName = transactionsList.get(i).substring(19,34); //15 chars long
+                String bid = transactionsList.get(i).substring(35);
+
+                //System.out.println(sellerName+"_"+buyerName+"_"+bid);
+                //System.out.println(sellerName.length());
+                //System.out.println(buyerName.length());
+                //System.out.println(bid.length());
+
+                refund_trans(sellerName, buyerName, bid);
 
             }
             else if(trans_code.equals("06")){
@@ -135,6 +146,9 @@ public class Transactions{
 
             //System.out.println(transactionsList.get(i)); 		
         }   
+
+        account_file(); //create new users file
+        items_file();   //create new items file
 
     }
 
@@ -199,9 +213,10 @@ public class Transactions{
     *   CCCCCCCCC is the refund credit
     *   _ is a space
     */
-    public void refund_trans(){
+    public void refund_trans(String sellerName, String buyerName, String bid){
         //05-refund
         //XX_UUUUUUUUUUUUUUU_SSSSSSSSSSSSSSS_CCCCCCCCC
+        accounts.refund(sellerName, buyerName, bid);
 
     }
 
