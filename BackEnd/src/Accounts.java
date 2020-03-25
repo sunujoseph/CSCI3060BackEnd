@@ -23,7 +23,7 @@ public class Accounts{
     File userFile = new File(file);
 
     public Accounts(){
-        oldUserFile();;
+        oldUserFile();
     }
 
     public void loginInfo(){
@@ -46,27 +46,60 @@ public class Accounts{
             usersList.add(user);
         }
 
+        
+
+    }
+
+
+    public void addCurrentUserCredit(String name, String type, String credit){
+        User creditUser = new User(name, type, credit);
+        for (int i = 0; i < usersList.size(); i++) { 
+            if(usersList.get(i).userName.equals(creditUser.userName)){
+                usersList.get(i).userCredit = creditUser.userCredit;
+                break;
+                //System.out.println(usersList.get(i).currentUsersFileFormat());
+            }
+        }
     }
 
     public void newUserFile(String name, String type, String credit){
         User newUser = new User(name, type, credit);
+        User temp = usersList.get(usersList.size()-1);//store end in temp
         
         usersList.remove(usersList.size() - 1); //remove END
+        stringList.remove(stringList.size()-1);
         usersList.add(newUser); // new user line
+        String listElement = usersList.get(usersList.size()-1).currentUsersFileFormat();
+        stringList.add(listElement);
+        stringList.add("END"); // add new END line at the end
+        usersList.add(temp); // end line
 
+        
+
+        //file creation here
+    }
+
+
+    public void deleteUserFile(String name, String type, String credit){
+        User deleteUser = new User(name, type, credit);
+        User temp = usersList.get(usersList.size()-1);//store end in temp
+        
+        usersList.remove(usersList.size() - 1); //remove END
+        stringList.remove(stringList.size()-1); //remove End
         for (int i = 0; i < usersList.size(); i++) { 
-            String listElement = usersList.get(i).currentUsersFileFormat();
-            stringList.add(listElement);
+            if(usersList.get(i).userName.equals(deleteUser.userName)){
+                usersList.remove(i);
+                stringList.remove(i);
+                break;
+            }
             //System.out.println(usersList.get(i).currentUsersFileFormat());
         }
         stringList.add("END"); // add new END line at the end
 
-        //file creation here
         
 
-
+        //file creation here
     }
-
     
 
 

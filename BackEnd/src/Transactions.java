@@ -38,6 +38,9 @@ public class Transactions{
     String location = System.getProperty("user.dir");
     String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\DTF.txt";
     File DTF_file = new  File(file);
+
+    Accounts accounts = new Accounts();
+    UserActivity userActivity = new UserActivity();
     
 
     public Transactions(){
@@ -73,12 +76,23 @@ public class Transactions{
             }
             else if(trans_code.equals("02")){
                 //02-delete
-                delete_trans();
+                String name = transactionsList.get(i).substring(3, 18);
+                String type = transactionsList.get(i).substring(19,21);
+                String credit = transactionsList.get(i).substring(22);
+                delete_trans(name, type, credit);
 
             }
             else if(trans_code.equals("03")){
                 //03-advertise
-                adv_trans();
+                //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSS_DDD_PPPPPP
+                //03 Lenovo Tab M10      userSS        030 000190
+                String itemName = transactionsList.get(i).substring(3, 23);
+                String sellerName = transactionsList.get(i).substring(23,36);
+                String days = transactionsList.get(i).substring(37,41);
+                String bid = transactionsList.get(i).substring(42);
+                //System.out.println(""+itemName+""+sellerName+""+days+""+bid);
+                //System.out.println(itemName.length());
+                adv_trans(itemName, sellerName, days, bid);
 
             }
             else if(trans_code.equals("04")){
@@ -93,7 +107,10 @@ public class Transactions{
             }
             else if(trans_code.equals("06")){
                 // 06-addcredit
-                addcredit_trans();
+                String name = transactionsList.get(i).substring(3, 18);
+                String type = transactionsList.get(i).substring(19,21);
+                String credit = transactionsList.get(i).substring(22);
+                addcredit_trans(name, type, credit);
 
             }
 
@@ -111,13 +128,13 @@ public class Transactions{
 
     public void create_trans(String name, String type, String credit){
         //01-create
-        Accounts accounts = new Accounts();
         accounts.newUserFile(name, type, credit);
     }
 
 
-    public void delete_trans(){
+    public void delete_trans(String name, String type, String credit){
         //02-delete
+        accounts.deleteUserFile(name, type, credit);
 
     }
 
@@ -131,8 +148,9 @@ public class Transactions{
     *   PPPPPP is the minimum bid
     *   _ is a space
     */
-    public void adv_trans(){
+    public void adv_trans(String itemName, String sellerName, String days, String bid){
         //03-advertise
+        userActivity.newItem(itemName, sellerName, days, bid);
 
     }
 
@@ -162,12 +180,14 @@ public class Transactions{
     */
     public void refund_trans(){
         //05-refund
+        //XX_UUUUUUUUUUUUUUU_SSSSSSSSSSSSSSS_CCCCCCCCC
 
     }
 
 
-    public void addcredit_trans(){
+    public void addcredit_trans(String name, String type, String credit){
         //06-addcredit
+        accounts.addCurrentUserCredit(name, type, credit);
 
     }
 
