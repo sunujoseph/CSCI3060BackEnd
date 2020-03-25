@@ -85,20 +85,32 @@ public class Transactions{
             else if(trans_code.equals("03")){
                 //03-advertise
                 //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSS_DDD_PPPPPP
+                //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSSSS_DDD_PPPPPP
+                //03 Lenovo Tab M10      userSS          030 000190
                 //username are 15 char long
                 //items are supposed be 25 chars long
                 //03 Lenovo Tab M10      userSS        030 000190
                 String itemName = transactionsList.get(i).substring(3, 22); //25 chars long
-                String sellerName = transactionsList.get(i).substring(23,36); //15 chars long
-                String days = transactionsList.get(i).substring(37,40);
-                String bid = transactionsList.get(i).substring(41);
-                //System.out.println(""+itemName+""+sellerName+""+days+""+bid);
+                String sellerName = transactionsList.get(i).substring(23,37); //15 chars long
+                String days = transactionsList.get(i).substring(39,42);
+                String bid = transactionsList.get(i).substring(43);
+                System.out.println(itemName.length());
+                System.out.println(sellerName.length());
+                //System.out.println(""+itemName+"_"+sellerName+"_"+days+"_"+bid);
                 //System.out.println(itemName.length());
                 adv_trans(itemName, sellerName, days, bid);
 
             }
             else if(trans_code.equals("04")){
                 //04-bid
+                //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSSSS_DDD_PPPPPP
+                //XX_IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSSSS_UUUUUUUUUUUUUU_PPPPPP
+                //04 i t e m 4           userSS          better admin   500.01
+                String itemName = transactionsList.get(i).substring(3, 22); //25 chars long
+                String sellerName = transactionsList.get(i).substring(23,36); //15 chars long
+                String days = transactionsList.get(i).substring(37,40);
+                String bid = transactionsList.get(i).substring(41);
+
                 bid_trans();
 
             }
@@ -130,7 +142,7 @@ public class Transactions{
 
     public void create_trans(String name, String type, String credit){
         //01-create
-        accounts.newUserFile(name, type, credit);
+        accounts.newUser(name, type, credit);
     }
 
 

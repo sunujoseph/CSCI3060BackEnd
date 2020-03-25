@@ -62,7 +62,7 @@ public class Accounts{
         }
     }
 
-    public void newUserFile(String name, String type, String credit){
+    public void newUser(String name, String type, String credit){
         User newUser = new User(name, type, credit);
         User temp = usersList.get(usersList.size()-1);//store end in temp
         
@@ -77,6 +77,10 @@ public class Accounts{
         
 
         //file creation here
+    }
+
+    public void newUserFile(){
+
     }
 
 

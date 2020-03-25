@@ -57,6 +57,10 @@ public class UserActivity{
         }
     }
 
+    public void bidItem(){
+
+    }
+
     public void newItem( String itemName,String seller, String days, String bid){
         //item1               admin1          userBS         098 134.00
         //IIIIIIIIIIIIIIIIIII_SSSSSSSSSSSSSSS_UUUUUUUUUUUUUU_DDD_PPPPPP

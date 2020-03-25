@@ -73,16 +73,19 @@ public class Item{
             else if(i == 20){
                 line = line + " " + userSeller;
                 i = i + userSeller.length();
+                //System.out.println(userSeller.length());
             }
             else if (i == 37){
                 line = line + " "  + userBuyer;
                 i = i + userBuyer.length();
+                //System.out.println(userBuyer.length());
+                //System.out.println(i);
             }
-            else if (i == 52){
-                line = line + "  "  + itemDays;  //somthing wrong the frontend's formatting. 
+            else if (i == 54){
+                line = line + " "  + itemDays;  //somthing wrong the frontend's formatting. 
                 i = i + itemDays.length();
             }
-            else if (i == 56){
+            else if (i == 58){
                 line = line + " "  + itemBid;
                 break;
             }
