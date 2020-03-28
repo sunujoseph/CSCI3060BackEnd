@@ -22,8 +22,9 @@ public class UserActivity {
 
     MyFileReader myFileReader = new MyFileReader();
     String location = System.getProperty("user.dir");
-    String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\available items.txt";
-    File itemFile = new File(file);
+    //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/available items.txt"
+
+    File itemFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\available items.txt");
 
     ArrayList<String> stringList = new ArrayList<String>();
     ArrayList<Item> itemList = new ArrayList<Item>();
@@ -56,6 +57,10 @@ public class UserActivity {
             itemList.add(item);
             // System.out.println(itemList.get(i).getItemName());
         }
+    }
+
+    public ArrayList<Item> getItemsList(){
+        return itemList;
     }
 
     public void bidItem(final String itemName, final String seller, final String buyer, final String bid) {
@@ -117,6 +122,7 @@ public class UserActivity {
 
         // System.out.println();
         File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newitems.txt");
+        //File file = new File("/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt");
         // Create the file
         MyFileWriter myFileWriter = new MyFileWriter();
         myFileWriter.setFile(file);

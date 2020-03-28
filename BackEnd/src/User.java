@@ -43,7 +43,7 @@ public class User{
     }
 
     public void setUserType(String type){
-        userName = type;
+        userType = type;
     }
 
     public String currentUsersFileFormat(){

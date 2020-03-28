@@ -19,8 +19,8 @@ public class Accounts{
      ArrayList<User> usersList = new ArrayList<User>();
 
     String location = System.getProperty("user.dir");
-    String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\current_user_accounts.txt";
-    File userFile = new File(file);
+    //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/current_user_accounts.txt";
+    File userFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\current_user_accounts.txt");
 
     public Accounts(){
         oldUserFile();
@@ -46,8 +46,11 @@ public class Accounts{
             usersList.add(user);
         }
 
-        
+    }
 
+    //getter for testing purposes
+    public ArrayList<User> getUsersList(){
+        return usersList;
     }
 
 
@@ -144,6 +147,7 @@ public class Accounts{
     public void newUserFile(){
 
         File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newusers.txt");
+        //File file = new File("/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt");
         // Create the file
         MyFileWriter myFileWriter = new MyFileWriter();
         myFileWriter.setFile(file);

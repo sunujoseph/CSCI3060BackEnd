@@ -37,6 +37,7 @@ public class Transactions{
     float available_credit;
     String location = System.getProperty("user.dir");
     String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\DTF.txt";
+    //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/DTF.txt";
     File DTF_file = new  File(file);
 
     Accounts accounts = new Accounts();
