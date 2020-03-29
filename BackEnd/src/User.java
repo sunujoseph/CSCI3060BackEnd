@@ -9,7 +9,7 @@ public class User{
     String userName;
     String userCredit;
     String userType;
-    
+    public int i;
 
     public User(String name, String type, String credit){
         userName = name;
