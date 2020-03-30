@@ -33,6 +33,7 @@ public class Transactions{
     ArrayList<String> transactionsList = new ArrayList<String>();
     MyFileReader myFileReader = new MyFileReader();
     
+    public int i;
     String trans_code;
     float available_credit;
     String location = System.getProperty("user.dir");
