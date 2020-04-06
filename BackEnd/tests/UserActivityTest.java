@@ -115,4 +115,23 @@ public class UserActivityTest {
 
     }
 
+    @Test
+    public void newItemsFileFail() {
+        testUserActivity.newItemsFile();
+
+        MyFileReader testReader2 = new MyFileReader();
+        String outFile = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt";
+        File userFile = new File(outFile);
+        testReader2.setFile(userFile);
+        ArrayList<String> gotList = testReader2.getFileData();
+        for(int i = 0; i < stringTestList.size(); i++){
+            //User user_1 = usersTestList[i];
+            assertEquals(stringTestList.get(i), gotList.get(i));
+            assertEquals(stringTestList.get(i), gotList.get(i));
+            assertEquals(stringTestList.get(i), gotList.get(i));
+
+        }
+
+    }
+
 }
