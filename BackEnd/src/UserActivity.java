@@ -123,7 +123,11 @@ public class UserActivity {
         // System.out.println();
         //File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newitems.txt");
         itemFile.delete();
+
         File itemFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\available items.txt");
+        //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/available items.txt";
+        //File itemFile = new File(file);
+
         itemFile.createNewFile();
         // Create the file
         MyFileWriter myFileWriter = new MyFileWriter();

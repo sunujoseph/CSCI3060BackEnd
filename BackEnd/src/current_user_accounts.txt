@@ -1,7 +1,7 @@
 userBS          BS 123456.78
 admin1          AA 000150.78
-userFS          FS 111111.11
-userSS          SS 222222.22
-userMaxCredit   FS 999999.00
 better admin    AA 987654.32
-END                         
+userFS          FS 135135.79
+userSS          SS 198197.54
+newuser         FS 002000.23
+END

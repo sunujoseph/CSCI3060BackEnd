@@ -32,8 +32,10 @@ public class Main{
 
 
 
-    //Call Transactions 
-    Transactions transactions = new Transactions();
+    //Call Transactions
+
+    //Transactions transactions = new Transactions();
+    Transactions transactions = new Transactions(args[0]);
     transactions.transactionsLoop();
 
 

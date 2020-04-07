@@ -37,16 +37,23 @@ public class Transactions{
     String trans_code;
     float available_credit;
     String location = System.getProperty("user.dir");
-    String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\DTF.txt";
+    //String file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\DTF.txt";
+    String file;
     //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/DTF.txt";
-    File DTF_file = new  File(file);
+    File DTF_file;
 
     Accounts accounts = new Accounts();
     UserActivity userActivity = new UserActivity();
     
-
     public Transactions(){
+        //file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/DTF.txt";
+        file = location + "\\CSCI3060BackEnd\\BackEnd\\src\\DTF.txt";
+        DTF_file = new File(file);
+    }
 
+    public Transactions(String path){
+        this.file = path;
+        this.DTF_file = new File(this.file);
     }
 
     public void transactionsLoop() throws IOException {

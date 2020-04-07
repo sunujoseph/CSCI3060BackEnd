@@ -53,7 +53,7 @@ public class MyFileWriterTest {
 
     @Test
     public void fileWriting() {
-        String newfile = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt";
+        String newfile = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/DTF.txt";
         File outfile = new File(newfile);
         testReader.setFile(outfile);
         try {

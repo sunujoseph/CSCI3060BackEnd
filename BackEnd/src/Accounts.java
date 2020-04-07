@@ -148,7 +148,11 @@ public class Accounts{
 
         //File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newusers.txt");
         userFile.delete();
+
         File userFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\current_user_accounts.txt");
+        //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/current_user_accounts.txt";
+        //File userFile = new File(file);
+
         userFile.createNewFile();
         // Create the file
         MyFileWriter myFileWriter = new MyFileWriter();

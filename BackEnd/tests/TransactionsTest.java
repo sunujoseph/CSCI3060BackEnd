@@ -14,7 +14,8 @@ public class TransactionsTest {
     ArrayList<User> usersTestList = new ArrayList<User>();
     ArrayList<String> stringUsersTestList = new ArrayList<>();
 
-    Transactions transactions = new Transactions();
+    String path = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/DTF.txt";
+    Transactions transactions = new Transactions(path);
 
     @Before
     public void setupTransactions() throws Exception {
