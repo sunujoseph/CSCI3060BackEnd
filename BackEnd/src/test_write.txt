@@ -1,6 +1,7 @@
-item1               admin1          userBS         098 134.00
-item2               userSS          userFS         012 012.34
-item 3              userFS          admin1         034 100.00
-Lenovo Tab M10      userSS                         030 900.90
-i t e m 4           userSS          better admin   011 500.01
-END
+userBS          BS 123456.78
+admin1          AA 000150.78
+userFS          FS 111111.11
+userSS          SS 222222.22
+userMaxCredit   FS 999999.00
+better admin    AA 987654.32
+END                         

@@ -22,10 +22,10 @@ public class UserActivity {
 
     MyFileReader myFileReader = new MyFileReader();
     String location = System.getProperty("user.dir");
-    //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/available items.txt"
+    //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/available items.txt";
 
     File itemFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\available items.txt");
-
+    //File itemFile = new File(file);
     ArrayList<String> stringList = new ArrayList<String>();
     ArrayList<Item> itemList = new ArrayList<Item>();
 
@@ -118,14 +118,16 @@ public class UserActivity {
 
     }
 
-    public void newItemsFile() {
+    public void newItemsFile() throws IOException {
 
         // System.out.println();
-        File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newitems.txt");
-        //File file = new File("/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt");
+        //File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newitems.txt");
+        itemFile.delete();
+        File itemFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\available items.txt");
+        itemFile.createNewFile();
         // Create the file
         MyFileWriter myFileWriter = new MyFileWriter();
-        myFileWriter.setFile(file);
+        myFileWriter.setFile(itemFile);
         try {
             myFileWriter.FileWriting(stringList);
         } catch (IOException e) {

@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -88,7 +89,7 @@ public class TransactionsTest {
     }
 
     @Test
-    public void transactionsLoop() {
+    public void transactionsLoop() throws IOException {
         //loops through functions below which already have tests
         //uses transaction codes read from file, our test daily transaction file has one code for each function
         //simply test statement coverage of dtf file (does everything run)
@@ -190,7 +191,7 @@ public class TransactionsTest {
     }
 
     @Test
-    public void account_file() {
+    public void account_file() throws IOException {
         transactions.accounts.newUserFile();
 
         MyFileReader testReader2 = new MyFileReader();
@@ -208,7 +209,7 @@ public class TransactionsTest {
     }
 
     @Test
-    public void items_file() {
+    public void items_file() throws IOException {
         transactions.userActivity.newItemsFile();
 
         MyFileReader testReader2 = new MyFileReader();

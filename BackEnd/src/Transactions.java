@@ -49,7 +49,7 @@ public class Transactions{
 
     }
 
-    public void transactionsLoop(){
+    public void transactionsLoop() throws IOException {
         //set file to read DTF file
         //store list of strings in a ArrayList
         myFileReader.setFile(DTF_file);
@@ -230,10 +230,10 @@ public class Transactions{
     }
 
 
-    public void account_file(){
+    public void account_file() throws IOException {
         accounts.newUserFile();
     }
-    public void items_file(){
+    public void items_file() throws IOException {
         userActivity.newItemsFile();    
     }
 

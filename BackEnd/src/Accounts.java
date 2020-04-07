@@ -21,7 +21,7 @@ public class Accounts{
     String location = System.getProperty("user.dir");
     //String file = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/current_user_accounts.txt";
     File userFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\current_user_accounts.txt");
-
+    //File userFile = new File(file);
     public Accounts(){
         oldUserFile();
     }
@@ -144,13 +144,15 @@ public class Accounts{
         //file creation here
     }
 
-    public void newUserFile(){
+    public void newUserFile() throws IOException {
 
-        File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newusers.txt");
-        //File file = new File("/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt");
+        //File file = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\Newusers.txt");
+        userFile.delete();
+        File userFile = new File(location + "\\CSCI3060BackEnd\\BackEnd\\src\\current_user_accounts.txt");
+        userFile.createNewFile();
         // Create the file
         MyFileWriter myFileWriter = new MyFileWriter();
-        myFileWriter.setFile(file);
+        myFileWriter.setFile(userFile);
         try {
             myFileWriter.FileWriting(stringList);
         } catch (IOException e) {

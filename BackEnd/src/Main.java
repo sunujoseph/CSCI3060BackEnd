@@ -14,7 +14,7 @@
 import java.io.*;
 import java.util.*;
 public class Main{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
     ArrayList<String> transactionsList = new ArrayList<String>();
     MyFileReader myFileReader = new MyFileReader();

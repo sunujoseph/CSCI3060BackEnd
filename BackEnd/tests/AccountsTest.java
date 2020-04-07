@@ -4,6 +4,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -121,11 +122,11 @@ public class AccountsTest {
     }
 
     @Test
-    public void newUserFile() {
+    public void newUserFile() throws IOException {
         testAccounts.newUserFile();
 
         MyFileReader testReader2 = new MyFileReader();
-        String outFile = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/test_write.txt";
+        String outFile = "/Users/harrythasarathan/Documents/Phase5_backend/CSCI3060BackEnd/BackEnd/src/current_user_accounts.txt";
         File userFile = new File(outFile);
         testReader2.setFile(userFile);
         ArrayList<String> gotList = testReader2.getFileData();
