@@ -19,6 +19,6 @@ do
 	done
 
     cat $OUT/* > $f/Merged/mergedDTF.txt 
-    #javac $HOM/Backend/src/*.java
-    #java $HOM/Backend/src/main "${d}/Merged/mergedDTF.txt"
+    javac $HOM/Backend/src/*.java
+    java $HOM/Backend/src/main "${d}/Merged/mergedDTF.txt"
 done
