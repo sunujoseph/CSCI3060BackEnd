@@ -1,0 +1,3 @@
+04 admin1                    item1 userFS          000200
+00 userFS          FS 111111.11
+

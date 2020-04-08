@@ -1,1 +1,6 @@
-
+06 userBS          AA 123556.78
+00 admin1          AA 000150.78
+04 userSS                    item2 admin1          000100
+00 admin1          AA 000150.78
+06 userFS          FS 111211.11
+00 userFS          FS 111211.11

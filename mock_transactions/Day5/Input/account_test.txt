@@ -1,0 +1,7 @@
+login
+userFS
+bid
+admin1
+item1
+200
+logout
