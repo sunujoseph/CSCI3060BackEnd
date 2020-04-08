@@ -1,0 +1,5 @@
+item1               admin1          userBS         097 134.00
+item2               userSS          userFS         019 100.00
+item 3              userFS          admin1         033 100.00
+i t e m 4           userSS          better admin   010 500.00
+END

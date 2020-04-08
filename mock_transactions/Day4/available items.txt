@@ -1,0 +1,6 @@
+item1               admin1          userBS         095 134.00
+item2               userSS          userFS         017 100.00
+item 3              userFS          admin1         031 100.00
+i t e m 4           userSS          better admin   008 500.01
+Lenovo Tab M10      userSS                         030 900.90
+END

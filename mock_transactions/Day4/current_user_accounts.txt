@@ -1,0 +1,7 @@
+userBS          BS 123556.78
+admin1          AA 000150.78
+better admin    AA 987654.32
+userFS          FS 111211.11
+userSS          SS 198297.54
+newuser         FS 002000.23
+END

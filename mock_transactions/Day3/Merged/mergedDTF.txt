@@ -1,3 +1,2 @@
-03 Lenovo Tab M10            userSS          030000190
-00 userSS          SS 222222.22
-
+03 Lenovo Tab M10      userSS          030 900.90
+00 userSS          SS 198197.54

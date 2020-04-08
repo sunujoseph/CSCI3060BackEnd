@@ -1,2 +1,2 @@
-04 admin1                    item1 userFS          000200
-00 userFS          FS 111111.11
+04 item1               admin1          better admin   200.00
+00 better admin    AA 987654.32
